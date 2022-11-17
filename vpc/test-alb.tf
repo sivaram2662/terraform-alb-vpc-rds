@@ -27,13 +27,13 @@ resource "aws_security_group" "siva-alb-sg" {
   }
 
   tags = {
-    Name = "mahesh-alb-sg"
+    Name = "siva-alb-sg"
   }
 }
 
 
 resource "aws_lb" "siva-test-alb" {
-  name               = "mahesh-test-alb"
+  name               = "siva-test-alb"
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.siva-alb-sg.id]
@@ -48,7 +48,7 @@ resource "aws_lb" "siva-test-alb" {
 #   }
 
   tags = {
-    Environment = "mahesh-alb"
+    Environment = "siva-alb"
   }
 }
 
